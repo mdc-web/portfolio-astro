@@ -12,12 +12,12 @@ import Hero from '../components/Hero.astro';
 				title="À propos"
 				tagline="Découvrez mon parcours et mes compétences"
 			>
-				<img
-					width="1553"
+				<!--<img
+					width="300"
 					height="873"
 					src="/assets/portrait.jpg"
 					alt="Benoit Modica at work"
-				/>
+				/>-->
 			</Hero>
 
 			<section>
@@ -25,7 +25,7 @@ import Hero from '../components/Hero.astro';
 				<div class="content">
 					<p>
 						Je m'appelle Benoit Modica, et ma carrière dans l'informatique débute par une reconversion professionnelle en 2021. Depuis lors, 
-						j'ai exploré divers métiers dans le domaine de la tech. J'ai successivement occupé des postes de développeur, de designer UI/UX, 
+						j'ai exploré divers métiers dans le domaine de la tech. J'ai successivement occupé des fonctions de développeur, de designer UI/UX, 
 						de technicien support, d'analyste data et de consultant MOA/MOE, acquérant ainsi une solide expérience.
 					</p>
 					<p>
@@ -38,13 +38,18 @@ import Hero from '../components/Hero.astro';
 			<section>
 				<h2 class="section-title">Diplômes</h2>
 				<div class="content">
-					<p>BAC+2 Dévellopeur web & web mobile(RNCP)</p>
+					<p>BAC+2 Développeur web & web mobile(RNCP)</p>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Skills</h2>
 				<div class="content">
-					<p>Curiosité, Adaptabilité, Esprit d'analyse, Polyvalence, Autonomie, Pédagogie</p>
+					<h3 class="title-skills">Stack technique</h3>
+					<p class="p-skills"><span class="span-skills">Langage informatique:</span> HTML, CSS, JavaScript, PHP</p>
+					<p class="p-skills"><span class="span-skills">Framework:</span> Symfony, React JS, Node JS</p>
+				</br>
+					<h3 class="title-skills">Soft skills</h3>
+					<p class="p-skills">Curiosité, Adaptabilité, Esprit d'analyse, Polyvalence, Autonomie, Pédagogie</p>
 				</div>
 			</section>
 		</main>
@@ -54,10 +59,24 @@ import Hero from '../components/Hero.astro';
 </BaseLayout>
 
 <style>
+
+	.title-skills{
+		font-size: var(--text-xl);
+		color: var(--gray-200);
+	}
+
+	.span-skills{
+		font-weight: bold;
+	}
+
 	.about {
 		display: flex;
 		flex-direction: column;
 		gap: 3.5rem;
+	}
+
+	.p-skills{
+		margin-top: 15px;
 	}
 
 	img {
