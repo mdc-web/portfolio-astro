@@ -31,21 +31,15 @@ const projects = (await getCollection('work'))
 			<header class="hero">
 				<Hero
 					title="Hello, Je m’appelle Benoit Modica"
-					tagline="Je suis développeur web free-lance et Consultant IT."
+					tagline="Je suis développeur web et Consultant IT."
 					align="start"
 				>
 					
-
-					<div class="hero-content"> <!-- Ajout d'une classe "hero-content" -->
-						<div class="roles">
-							<Pill><Icon icon="code" size="1.33em" /> Développeur</Pill>
-							<Pill><Icon icon="pencil-line" size="1.33em" /> Consultant IT</Pill>
-							<Pill>
-								<Icon icon="pencil-line" size="1.33em" />
-								<a class="linkCV" href="../../public/assets/CV/CV_Benoit_Modica.pdf" target="_blank">Voir mon CV</a>
-							</Pill>
-						</div>
+					<div class="roles">
+						<Pill><Icon icon="code" size="1.33em" /> Développeur web</Pill>
+						<Pill><Icon icon="paper-plane-tilt" size="1.33em" /> Consultant IT</Pill>
 					</div>
+					
 				</Hero>
 
 				<img
@@ -99,18 +93,9 @@ const projects = (await getCollection('work'))
 		gap: 2rem;
 	}
 
-	.hero-content{
-		justify-content: center;
-    	display: flex;
-	}
 
 	.roles {
 		display: none;
-		margin-top: 0.5rem;
-		display: flex;
-		gap: 0.5rem;
-		flex-direction: column;
-		max-width: 12rem;
 	}
 
 	.hero img {
@@ -121,19 +106,6 @@ const projects = (await getCollection('work'))
 		box-shadow: var(--shadow-md);
 	}
 
-	.linkCV{
-		display: flex;
-		gap: 0.5rem;
-		/* color: var(--accent-regular); */
-		color: whitesmoke;
-		border: 2px solid var(--accent-regular);
-		border-radius: 999rem;
-		font-size: var(--text-md);
-		line-height: 1.35;
-		white-space: nowrap;
-		font-weight: bold;
-		text-decoration: none;
-	}
 
 	@media (min-width: 50em) {
 		.hero {
@@ -142,11 +114,6 @@ const projects = (await getCollection('work'))
 			padding-inline: 2.5rem;
 			gap: 3.75rem;
 		}
-
-		.hero-content{
-		justify-content: flex-start;
-    	display: flex;
-	}
 
 		.roles {
 			margin-top: 0.5rem;

@@ -4,7 +4,11 @@ import Icon from './Icon.astro';
 ---
 
 <aside>
-	<h2>Envie de travailler avec moi ?</h2>
+	<h2 class="title-contact">Envie de travailler avec moi ?</h2>
+	<CallToAction href="/assets/CV/CV_Benoit_Modica.pdf">
+		Voir mon CV
+		<Icon icon="pencil-line" size="1.2em" />
+	</CallToAction>
 	<CallToAction href="mailto:contact@mdc-web.fr">
 		Ecrivez-moi
 		<Icon icon="paper-plane-tilt" size="1.2em" />
@@ -35,12 +39,24 @@ import Icon from './Icon.astro';
 			padding: 7.5rem;
 			flex-direction: row;
 			flex-wrap: wrap;
-			justify-content: space-between;
+			justify-content: center;
 		}
 
 		h2 {
 			font-size: var(--text-3xl);
 			text-align: left;
+		}
+	}
+
+	@media (max-width: 1320px) {
+		aside {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		}
+
+		.title-contact {
+			text-align: center;
 		}
 	}
 </style>
